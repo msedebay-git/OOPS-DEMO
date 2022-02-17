@@ -6,15 +6,24 @@ using System.Threading.Tasks;
 
 namespace OOPS_DEMO
 {
-    class ClsEmployee
+    class ClsContructor
     {
-        // Class member
-        int Empid;       //Field
-        string Ename;    //Field
-        string Eaddress; //Field
-        int Eage;        //Field
+        int Empid;       
+        string Ename;    
+        string Eaddress; 
+        int Eage;
 
-        public void GetEmpData() // Get method
+        // constructor
+        public ClsContructor()
+        {
+            this.Empid = 1234;
+            this.Ename = "Mohammed";
+            this.Eaddress = "7177 Talisman Lane";
+            this.Eage = 35;
+        }
+
+        //method get
+        public void GetEmpData()
         {
             Console.WriteLine("Enter Employee Info:");
             this.Empid = int.Parse(Console.ReadLine());
@@ -22,6 +31,7 @@ namespace OOPS_DEMO
             this.Eaddress = Console.ReadLine();
             this.Eage = int.Parse(Console.ReadLine());
         }
+
         public void DisplayEmpData() //Display method
         {
             Console.WriteLine("Employee Details are:");
@@ -31,19 +41,17 @@ namespace OOPS_DEMO
             Console.WriteLine("Employee age is: " + this.Eage);
         }
     }
-    class ClsAccess //main method
+
+    class ClsUDConstructor //main method
     {
         static void Main(string[] args)
         {
-            ClsEmployee obj1 = new ClsEmployee();
-            ClsEmployee obj2 = new ClsEmployee();
-            obj1.GetEmpData(); //member access operator
-            obj2.GetEmpData();
+            ClsContructor obj1 = new ClsContructor();
+            ClsContructor obj2 = new ClsContructor();
             obj1.DisplayEmpData();
             obj2.DisplayEmpData();
             Console.Read();
+
         }
-
-
     }
 }

@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>OOPS_DEMO.ClsEmployee1</StartupObject>
+    <StartupObject>OOPS_DEMO.ClsParameter</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsContruct-param.cs" />
+    <Compile Include="ClsContructor.cs" />
     <Compile Include="ClsEmployee.cs" />
     <Compile Include="ClsEmployee1.cs" />
     <Compile Include="Program.cs" />
